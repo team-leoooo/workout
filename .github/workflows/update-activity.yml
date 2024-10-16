@@ -13,7 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Update GitHub Activity
-        uses: TheDanniCraft/activity-log@v1
+        uses: TheDanniCraft/activity-log@1
         with:
           GITHUB_USERNAME: "Leo041192"
-          GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }} # Ensure this matches the secret name in repository settings
+          GITHUB_TOKEN: ${< secrets.ACTIONSECRET2024 }}
+          TARGET_REPOS: '[team-leoooo/workout]'
+          EVENT_LIMIT: '100'
